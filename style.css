@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+body{
+    background: url(images/bgweather.jpg);
+}
+.container{
+   max-width: 1200px;
+   margin: 80px 450px;
+}
+.weatherCard{
+    width: 500px;
+    height: 600px;
+    background-color: rgb(70, 139, 200);
+    background: linear-gradient(135deg, #6b366b, #1b0e1a);
+    opacity: 90%;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.weatherContent h1{
+    text-align: center;
+    padding: 20px;
+    color: rgb(200, 169, 194);
+}
+.weatherContent{
+    padding: 20px;
+}
+.forSearch{
+    display: flex;
+    justify-content: center;
+    gap: 10px;    
+}
+.forSearch input{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.forSearch button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.forSearch button:hover{
+    background-color: #2f172f;
+    color: white;
+}
+.currentWeather{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 15px;
+    font-size: 20px;
+    color: rgb(155, 106, 145);
+}
+.currentWeather img{
+    width: 60px;
+}
+.forecast{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    gap: 50px;
+    color: rgb(155, 106, 145);
+}   
+.forecastItem1 p img{
+   width: 45px;
+   
+}
