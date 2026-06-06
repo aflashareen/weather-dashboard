@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container">
+              <div class="forTheme">
+                  <button class="themeBtn">Light</button>
+              </div>
         <div class="weatherCard">
             <div class="weatherContent">
               <h1>Weather Dashboard</h1>
@@ -15,13 +18,21 @@
                   <input class="search-input" type="text" placeholder="Enter city name" id="cityInput">
                   <button id="searchBtn">Search</button>
               </div>
+              <div id="errorMsg" class="error" style="display: none;"></div>
+              <div id="loader">Loading...</div>
+              <div class="forFav">
+                <div class="forBtn"> <button id="favoriteBtn">Add to Favorites</button></div>
+                <div id="favoritesList">
+                    
+                </div>
             </div>
+            
             <div class="currentWeather">
-                <h3>Calicut</h3>
-                <img src="images/rain.png" alt="">
-                <p>25°C</p>
-                <p>Partly Cloudy</p>
-                <p>humidity: 60%</p>                               
+                <h3 id="cityName">--------</h3>
+                <img id="weatherIcon" src="images/rain.png" alt="">
+                <p id="temp">------</p>
+                <p id="description">-----</p>
+                <p id="humidity">----</p>                               
             </div>
             <div class="forecast">
                 <div class="forecastItem1">

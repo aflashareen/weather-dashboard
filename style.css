@@ -8,18 +8,29 @@
 body{
     background: url(images/bgweather.jpg);
 }
+body.light{
+    background: url(images/bgweather2.jpg);
+}
 .container{
-   max-width: 1200px;
-   margin: 80px 450px;
+   /* max-width: 1200px; */
+   width: 100%;
 }
 .weatherCard{
-    width: 500px;
+    width: 700px;
     height: 600px;
     background-color: rgb(70, 139, 200);
     background: linear-gradient(135deg, #6b366b, #1b0e1a);
     opacity: 90%;
     border-radius: 20px;
     border: 1px solid black;
+    margin: 25px 400px;
+}
+.weatherCard.dark{
+    background: linear-gradient(135deg, #6b366b, #1b0e1a);
+}
+.weatherCard.light{
+    background: linear-gradient(135deg, #4f6a8f, #7caae6);
+    opacity: 80%;
 }
 .weatherContent h1{
     text-align: center;
@@ -50,6 +61,10 @@ body{
     background-color: #2f172f;
     color: white;
 }
+#loader {
+    display: none;
+    text-align: center;
+}
 .currentWeather{
     margin-top: 20px;
     display: flex;
@@ -65,11 +80,67 @@ body{
 .forecast{
     display: flex;
     justify-content: space-around;
-    padding: 50px;
+    padding: 20px;
     gap: 50px;
     color: rgb(155, 106, 145);
 }   
 .forecastItem1 p img{
    width: 45px;
    
+}
+.themeBtn{
+  width: 100px;
+  height: 30px;
+  background-color: rgb(20, 38, 55);
+  color: rgb(70, 139, 200);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.forTheme{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.error {
+    color: rgb(200, 53, 53);
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;    
+}
+.forFav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+#favoriteBtn{
+    background-color: #2f172f;
+    color: rgb(155, 106, 145);
+    height: 30px;
+    border: 1px solid black;
+    width: 110px;
+}
+body.dark #favoriteBtn{
+    background-color: #2f172f;
+    color: rgb(155, 106, 145);
+}
+body.light #favoriteBtn{
+    background-color:  rgb(70, 139, 200);;
+    color: rgb(20, 38, 55);
+}
+body.light .currentWeather{
+    color: rgb(20, 38, 55);
+}
+body.light .weatherContent h1{
+    color: rgb(20, 38, 55);
+}
+body.light .forecast{
+    color: rgb(20, 38, 55);
+}
+body #removeBtn{
+    background-color: #2f172f;
+    color: rgb(155, 106, 145);
+    width: 25px;
+}
+body.light #removeBtn{
+    background-color: rgb(20, 38, 55);
+    color: rgb(70, 139, 200);
 }
