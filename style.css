@@ -201,7 +201,7 @@ body.light .favoriteItem {
     .weatherCard{
         width:95%;
         margin: auto;
-        margin-top: 35px;
+        margin-top: 20px;
         margin-bottom: 15px;
         height: 440px;
     }
@@ -217,7 +217,7 @@ body.light .favoriteItem {
         width: 100%;
         height: 100px;
         padding: 10px;
-        margin-bottom: 150px;
+        /* margin-bottom: 150px; */
     }
     .forFav{
         padding: 0%;
