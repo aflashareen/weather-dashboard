@@ -14,16 +14,19 @@ body.light{
 .container{
    /* max-width: 1200px; */
    width: 100%;
+   display: flex;
+
+  
 }
 .weatherCard{
     width: 700px;
     height: 600px;
     background-color: rgb(70, 139, 200);
     background: linear-gradient(135deg, #6b366b, #1b0e1a);
-    opacity: 90%;
+    opacity: 80%;
     border-radius: 20px;
     border: 1px solid black;
-    margin: 25px 400px;
+    margin: 65px 50px;
 }
 .weatherCard.dark{
     background: linear-gradient(135deg, #6b366b, #1b0e1a);
@@ -73,17 +76,12 @@ body.light{
     gap: 15px;
     font-size: 20px;
     color: rgb(155, 106, 145);
+    padding: 70px;
 }
 .currentWeather img{
     width: 60px;
 }
-.forecast{
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 50px;
-    color: rgb(155, 106, 145);
-}   
+
 .forecastItem1 p img{
    width: 45px;
    
@@ -107,9 +105,10 @@ body.light{
     text-align: center;    
 }
 .forFav{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    /* display: flex;
+    justify-content: space-between; */
+
+    padding: 125px 200px;
 }
 #favoriteBtn{
     background-color: #2f172f;
@@ -132,9 +131,6 @@ body.light .currentWeather{
 body.light .weatherContent h1{
     color: rgb(20, 38, 55);
 }
-body.light .forecast{
-    color: rgb(20, 38, 55);
-}
 body #removeBtn{
     background-color: #2f172f;
     color: rgb(155, 106, 145);
@@ -144,19 +140,98 @@ body.light #removeBtn{
     background-color: rgb(20, 38, 55);
     color: rgb(70, 139, 200);
 }
+body.dark .favoriteItem {
+    color: rgb(155, 106, 145);
+}
+body.light .favoriteItem {
+    color: rgb(20, 38, 55);
+}
+
+.rightCards{
+    display: flex;
+    flex-direction: column;
+    
+}
+.favoriteCard{
+    background: linear-gradient(135deg, #6b366b, #1b0e1a);
+    opacity: 80%;
+    width: 500px;
+    height: 300px;
+    margin-top: 70px;
+    border-radius:25px;
+    border: 1px solid black;
+}
+.addingCard{
+    background: linear-gradient(135deg, #6b366b, #1b0e1a);
+    opacity: 80%;
+    width: 500px;
+    height: 286px;
+    margin-top: 10px;
+    border-radius:25px;
+    border: 1px solid black;
+}
+.favoriteCard.dark{
+    background: linear-gradient(135deg, #6b366b, #1b0e1a);
+}
+.favoriteCard.light{
+    background: linear-gradient(135deg, #4f6a8f, #7caae6);
+    opacity: 80%;
+}
+.addingCard.dark{
+    background: linear-gradient(135deg, #6b366b, #1b0e1a);
+}
+.addingCard.light{
+    background: linear-gradient(135deg, #4f6a8f, #7caae6);
+    opacity: 80%;
+}
+.favoriteItem{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(155, 106, 145);
+}
+
 @media screen and (max-width: 480px) {
+    .currentWeather{
+        margin-top: 0px;
+        padding: 0px;
+        gap: 5px;
+    }  
     .weatherCard{
         width:95%;
         margin: auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        height: 440px;
     }
     .body{
         width: 100%;
     }
-    .forecast{
-    padding: 10px;
-    gap: 25px;
-    color: rgb(155, 106, 145);
-}   
+    .container{
+        flex-direction: column;
+    }
+    .rightCards{
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+    }
+    .forFav{
+        padding: 0%;
+        display: flex;
+        justify-content: center;
+        margin-top: 85px;
+    }
+    .favoriteCard{
+        margin-top: 2px;
+        height: 200px;
+    }
+    .addingCard{
+        height: 200px;
+        margin-top: 0;
+    }
+
+
 }

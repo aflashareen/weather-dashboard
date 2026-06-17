@@ -13,50 +13,36 @@
               </div>
         <div class="weatherCard">
             <div class="weatherContent">
-              <h1>Weather Dashboard</h1>
+                  <h1>Weather Dashboard</h1>
               <div class="forSearch">
                   <input class="search-input" type="text" placeholder="Enter city name" id="cityInput">
                   <button id="searchBtn">Search</button>
               </div>
-              <div id="errorMsg" class="error" style="display: none;"></div>
-              <div id="loader">Loading...</div>
-              <div class="forFav">
-                <div class="forBtn"> <button id="favoriteBtn">Add to Favorites</button></div>
-                <div id="favoritesList">
-                    
-                </div>
-            </div>
+               <div id="errorMsg" class="error" style="display: none;"></div>
+               <div id="loader">Loading...</div>
+               
             
-            <div class="currentWeather">
-                <h3 id="cityName">--------</h3>
+               <div class="currentWeather">
+                <h3 id="cityName">-----------------</h3>
                 <img id="weatherIcon" src="images/rain.png" alt="">
-                <p id="temp">------</p>
-                <p id="description">-----</p>
-                <p id="humidity">----</p>                               
-            </div>
-            <div class="forecast">
-                <div class="forecastItem1">
-                    <h3>Mon</h3>
-                    <p><img src="images/clear.png" alt="">32°C</p>
-                </div>
-                <div class="forecastItem1">
-                    <h3>Tue</h3>
-                    <p><img src="images/rain.png" alt="">28°C</p>
-                </div>  
-                <div class="forecastItem1">
-                    <h3>Wed</h3>
-                    <p><img src="images/mist.png" alt="">30°C</p>
-                </div>  
-                <div class="forecastItem1">
-                    <h3>Thu</h3>
-                    <p><img src="images/clouds.png" alt="">27°C</p>
-                </div>  
-                <div class="forecastItem1">
-                    <h3>Fri</h3>
-                    <p><img src="images/clear.png" alt="">32°C</p>
-                </div>  
-            </div>
+                <p id="temp">----------</p>
+                <p id="description">------------</p>
+                <p id="humidity">----------</p>                               
+              </div>
         </div>
+     </div>
+     <div class="rightCards">
+     <div class="favoriteCard">
+            <div class="forFav">
+                <div class="forBtn"> 
+                    <button id="favoriteBtn">Add to Favorites</button>
+                </div>
+                <div id="favoritesList"></div>
+              </div>
+     </div>
+     <div class="addingCard">
+     </div>
+     </div>
     </div>
     <script src="script.js"></script>
 </body>

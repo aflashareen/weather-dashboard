@@ -3,7 +3,9 @@ const searchBtn = document.getElementById("searchBtn");
 const themeBtn = document.querySelector(".themeBtn");
 const weatherCard = document.querySelector(".weatherCard");
 const favoriteBtn = document.getElementById("favoriteBtn");
-const favoritesList = document.getElementById("favoritesList")
+const favoritesList = document.getElementById("favoritesList");
+const favoriteCard = document.querySelector(".favoriteCard");
+const addingCard = document.querySelector(".addingCard");
 
 
 
@@ -23,6 +25,13 @@ if(document.body.classList.contains("dark")){
 }
     weatherCard.classList.toggle("dark");
     weatherCard.classList.toggle("light");
+
+    favoriteCard.classList.toggle("dark");
+    favoriteCard.classList.toggle("light");
+
+    addingCard.classList.toggle("dark");
+    addingCard.classList.toggle("light");
+
 
 });
 
@@ -133,10 +142,11 @@ favoriteBtn.addEventListener("click",()=>{
         }
         let favorites = JSON.parse(data);
 
-        favoritesList.innerHTML = ""; 
+        addingCard.innerHTML = ""; 
 
         for(let city of favorites){
         let container = document.createElement("div");
+        container.classList.add("favoriteItem");
 
         let p = document.createElement("p");
             p.textContent = city ;
@@ -149,12 +159,17 @@ favoriteBtn.addEventListener("click",()=>{
 
             btn.addEventListener("click", ()=>{
                 removeFavorite(city);
-            })
+            });
+
+            p.addEventListener("click", ()=>{
+                input.value = city;
+                checkWeather(city)
+            });
 
             container.appendChild(p);
             container.appendChild(btn);
 
-            favoritesList.appendChild(container);
+            addingCard.appendChild(container);
 
         }
     }
