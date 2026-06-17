@@ -217,6 +217,7 @@ body.light .favoriteItem {
         width: 100%;
         height: 100px;
         padding: 10px;
+        margin-bottom: 50px;
     }
     .forFav{
         padding: 0%;
